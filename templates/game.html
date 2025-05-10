@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Play Wordle - Wordle Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/game.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <script src="{{ url_for('static', filename='scripts/game.js') }}"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>🎯 Wordle Challenge</h1>
+  </header>
+
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="#news">Company</a>
+    <a href="#contact">Services</a>
+    <a href="#about">About Us</a>
+    <a class="active" href="login.html">Login/Register</a>
+  </nav>
+
+  <h2 style="text-align: center;">Can you guess today's Wordle?</h2>
+
+  <div class="game-container" id="game-container">
+    <div class="grid">
+        <!-- Generate 6 rows, 5 tiles each -->
+        <script>
+            for (let row = 0; row < 6; row++) {
+                document.write('<div class="row">');
+                for (let col = 0; col < 5; col++) {
+                    document.write(`<input type="text" maxlength="1" class="tile" id="tile-${row}-${col}">`);
+                }
+                document.write('</div>');
+            }
+        </script>
+    </div>
+    <div class="submit-button">
+      <button id="submit-button">Submit</button>
+    </div>
+  </div>
+  <div id="status-message" class="status-message"></div>
+</div>
+</div>
+
+
+  <footer class="footer">
+    <a href="#news">Company</a><br>
+    <a href="#contact">Services</a><br>
+    <a href="#about">About Us</a><br>
+    <a href="#career">Careers</a><br>
+    <a href="#follow">Follow Us</a><br>
+    <p>&copy; 2025 All rights reserved</p>
+  </footer>
+  
+
+</body>
+</html>

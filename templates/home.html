@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Wordle Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>🎮 Wordle Challenge</h1>
+    </header>
+
+    <nav class="topnav">
+        <a class="active" href="home.html">Home</a>
+        <a href="#news">Company</a>
+        <a href="#contact">Services</a>
+        <a href="#about">About Us</a>
+        
+    </nav>
+
+    <main>
+        <section class="intro">
+
+
+            {% if username %}
+        <h2>Welcome, {{ username }}!</h2>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+        <h2>Welcome to the Home Page!</h2>
+        <a href="{{ url_for('login') }}">Login/Register</a>
+    {% endif %}
+            <p class="game-desc">
+                Wordle is a daily word puzzle challenge! You get six tries to guess the secret five-letter word. Use strategy, logic, and vocabulary skills to win. Can you master the puzzle of the day?
+            </p>
+            <div class="indeximg">
+                <img src="{{ url_for('static', filename='img/home.jpg') }}" alt="Wordle Game" />
+            </div>
+            <div class="game-launch">
+                <a class="gamebutton" href="{{ url_for('game') }}">🎯 Play Now</a>
+            </div>
+        </section>
+
+        <section class="instructions">
+            <h2>📜 Game Instructions</h2>
+            <ul>
+                <li>You have <strong>six attempts</strong> to guess the five-letter Wordle.</li>
+                <li>Submit using the “Enter” key on the Wordle keyboard.</li>
+                <li>🟨 = correct letter, wrong place. 🟩 = correct letter, right place. ⬜ = not in the word.</li>
+                <li>Keep guessing until you win or run out of turns. Good luck!</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#news">Company</a>
+            <a href="#contact">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#career">Careers</a>
+            <a href="#follow">Follow Us</a>
+        </div>
+        <p>&copy; 2025 Wordle Game. All rights reserved.</p>
+    </footer>
+</body>
+</html>

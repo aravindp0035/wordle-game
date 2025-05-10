@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f1f1f1;
+}
+
+header {
+  padding: 20px;
+  background-color: #111;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  text-align: center;
+  color: #00ffea;
+  font-size: 2.8em;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ffea;
+}
+
+.topnav {
+  display: flex;
+  justify-content: center;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #00ffea;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+
+.topnav a:hover {
+  background-color: #00ffea;
+  color: #1a1a1a;
+  border-radius: 5px;
+}
+
+.topnav a.active {
+  background-color: #ff007f;
+  color: white;
+  border-radius: 5px;
+}
+
+.login-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.login-image img {
+  width: 80%;
+  max-width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  margin: 20px;
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00ffea;
+  max-width: 350px;
+  width: 90%;
+  margin: 20px;
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #00ffea;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 0 8px #00ffea;
+}
+
+button {
+  width: 95%;
+  padding: 12px;
+  background-color: #ff007f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f inset;
+}
+
+button:hover {
+  background-color: #ff3399;
+  box-shadow: 0 0 20px #ff3399, 0 0 30px #ff3399 inset;
+}
+
+#toggle-text {
+  margin-top: 15px;
+  color: #ccc;
+  font-size: 0.95em;
+}
+
+#toggle-link {
+  color: #00ffea;
+  text-decoration: none;
+}
+
+#toggle-link:hover {
+  color: #ff007f;
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #111;
+  text-align: center;
+  padding: 30px 0;
+  border-top: 2px solid #00ffea;
+  color: #ccc;
+}
+
+.footer a {
+  color: #00ffea;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer a:hover {
+  color: #ff007f;
+}
+
+.footer p {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #888;
+}
